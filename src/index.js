@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
-import styles from './styles.module.css'
+import { button, buttonsContainer, container, addButton, subtractButton } from './_styles'
 
 const Counter = () => {
   const [count, setCount] = useState(0)
+
   return (
-    <div className={styles.container}>
+    <div style={container}>
       <h3>Current count: {count}</h3>
-      <div className={styles.buttonsContainer}>
-        <button className={styles.addButton} onClick={() => setCount(count + 1)}>Add</button>
-        <button className={styles.subtractButton} onClick={() => setCount(count - 1)}>Subtract</button>
+      <div style={buttonsContainer}>
+        <button style={addButton} onClick={() => setCount(count + 1)}>Add</button>
+        <button style={subtractButton} onClick={() => setCount(count - 1)}>Subtract</button>
       </div>
     </div>
   )
